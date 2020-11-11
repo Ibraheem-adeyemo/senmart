@@ -44,4 +44,3 @@ export const HomeStack:React.FC<RouteProps> = ({}) => {
         </NavigationContainer>
     );
 }
-

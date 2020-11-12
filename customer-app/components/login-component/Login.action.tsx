@@ -1,9 +1,9 @@
 import axios from 'axios';
 import {Dispatch} from 'react'
-import { AuthActionType, LoginInterface } from '../../Types/AuthInterface'
+import { LoginActionInterface } from '../../models/Types/AuthInterface'
 
 const authActionCreator = {
-    login: (payload: any) => {
+    login: (payload: LoginActionInterface) => {
         return {
             actionType: 'LOGIN',
             payload
@@ -11,7 +11,7 @@ const authActionCreator = {
     }
 }
 
-export const loginAction = (object: any) => {
+export const loginAction = (object: LoginActionInterface) => {
     return (dispatch: Dispatch<any>) => {
         setTimeout(() => {
             dispatch(authActionCreator.login(object))

@@ -1,5 +1,18 @@
 import React from 'react';
-import { HomeStack } from "./app-blocks/routes/HomeStack";
-import { Providers } from './app-blocks/screens/Providers';
+import { HomeStack } from "./components/routes/HomeStack";
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import{ rootReducer } from './utils/redux/Stores/reducers';
 
-export default Providers
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const AppWrapper = () => {
+    return (
+        <Provider store={store}>
+            <HomeStack />
+        </Provider>
+    )
+}
+
+export default AppWrapper;

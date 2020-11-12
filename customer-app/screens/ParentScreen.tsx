@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native';
+import { ChildrenNode } from '../models/Types/AppParamList'
 
 
 const style = StyleSheet.create({
@@ -10,10 +11,6 @@ const style = StyleSheet.create({
     }
 })
 
-interface ChildrenNode {
-    children: React.ReactChild | React.ReactChildren
-}
-
-export const ParentScreen = ({ children }: any) => (
+export const ParentScreen = ({ children }: ChildrenNode) => (
     <View style={style.container}>{children}</View>
 )

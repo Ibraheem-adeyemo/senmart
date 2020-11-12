@@ -6,7 +6,7 @@ export type AuthParamList = {
     SignUp: object | undefined
 } | Record<string, object | undefined>
 
-export type AuthNavProps<T extends keyof AuthParamList> = {
+export interface AuthNavProps<T extends keyof AuthParamList> {
     navigation: StackNavigationProp<AuthParamList, T>;
     route: RouteProp<AuthParamList, T>
 }

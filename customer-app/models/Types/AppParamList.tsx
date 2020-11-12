@@ -7,6 +7,10 @@ export type AppParamList = {
     Search: undefined
 }
 
+export interface ChildrenNode {
+    children: React.ReactChild | React.ReactChildren
+}
+
 export type AppNavProps<T extends keyof AppParamList> = {
     navigation: StackNavigationProp<AppParamList, T>;
     route: RouteProp<AppParamList, T>

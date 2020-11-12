@@ -1,4 +1,4 @@
-import { AuthActionType, UserModel } from "../../Types/AuthInterface";
+import { AuthActionType, UserModel } from "../../models/Types/AuthInterface";
 
 
 type userModel = {
@@ -12,12 +12,12 @@ const authType = {
     userLogOut: 'LOGOUT',
     userAuthError: 'USER_AUTH_ERROR'
 }
-const authState = {
+const defaultUserState = {
     user: {},
     isLoggedIn: false
 }
 
-export const authReducer = (newState: userModel = authState, action: AuthActionType) => {
+export const loginReducer = (newState: userModel = defaultUserState, action: AuthActionType) => {
     switch (action.actionType) {
         case authType.userLogIn:
             return {

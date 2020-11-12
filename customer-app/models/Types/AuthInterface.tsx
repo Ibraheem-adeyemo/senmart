@@ -21,4 +21,9 @@ export interface ErrorInterface {
     payload: any
 };
 
+export interface LoginActionInterface {
+    user: object,
+    isLoggedIn: boolean
+}
+
 export type AuthActionType = LoginInterface | SignUpInterface| ErrorInterface;

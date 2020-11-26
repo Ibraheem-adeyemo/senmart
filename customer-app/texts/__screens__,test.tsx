@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {LoginScreen, HomeScreen} from './index'
+import {LoginScreen, HomeScreen} from '../screens/index'
 
 describe("Render app's screens", () => {
     it("Renders <LoginScreen /> Component correctly", () => {

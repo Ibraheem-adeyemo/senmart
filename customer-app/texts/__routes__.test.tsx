@@ -1,8 +1,8 @@
 import React from 'react';
 import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock'
 import renderer from 'react-test-renderer';
-import { AppTabs } from './AppTabs';
-import { HomeStack } from './HomeStack';
+import { AppTabs } from '../components/routes/AppTabs';
+import { HomeStack } from '../components/routes/HomeStack';
 
 // beforeAll(() => { 
     jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);

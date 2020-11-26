@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, RouteProp} from '@react-navigation/native';
-import { ApplicationState } from '../../utils/redux/Stores/reducers'
+import { ApplicationState } from '../../Stores/Store/reducers'
 import { SignUpScreen, LoginScreen } from '../../screens/index'
 import { AuthParamList } from '../../models/Types/AuthParamLists';
 import { ParentScreen } from '../../screens/ParentScreen';
 import { Text } from 'react-native';
 import {  useSelector, useDispatch } from 'react-redux';
-import { loginAction } from '../login-component/Login.action';
+import { loginAction } from '../../actions/Login.action';
 import { AppTabs } from './AppTabs';
 
 interface RouteProps {}

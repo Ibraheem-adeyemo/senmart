@@ -3,7 +3,7 @@ import { HomeStack } from "./components/routes/HomeStack";
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import{ rootReducer } from './utils/redux/Stores/reducers';
+import{ rootReducer } from './Stores/Store/reducers';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

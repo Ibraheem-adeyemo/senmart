@@ -3,7 +3,8 @@ import { RouteProp } from "@react-navigation/native"
 
 export type AuthParamList = {
     Login: object | undefined,
-    SignUp: object | undefined
+    SignUp: object | undefined,
+    Home: object | undefined,
 } | Record<string, object | undefined>
 
 export interface AuthNavProps<T extends keyof AuthParamList> {

@@ -5,19 +5,19 @@ export interface UserModel {
 }
 
 export interface LoginInterface {
-    readonly actionType: 'LOGIN',
+    readonly type: 'LOGIN',
     payload: {
         email: string, password: string
     }
 };
 
 export interface SignUpInterface {
-    readonly actionType: 'USER_SIGNUP',
+    readonly type: 'USER_SIGNUP',
     payload: UserModel
 };
 
 export interface ErrorInterface {
-    readonly actionType: 'USER_AUTH_ERRROR',
+    readonly type: 'USER_AUTH_ERRROR',
     payload: any
 };
 
@@ -26,4 +26,4 @@ export interface LoginActionInterface {
     isLoggedIn: boolean
 }
 
-export type AuthActionType = LoginInterface | SignUpInterface| ErrorInterface;
+export type ActionTypeInterface = LoginInterface | SignUpInterface| ErrorInterface;

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {Dispatch} from 'react'
 import { LoginActionInterface } from '../models/Types/AuthInterface'
 

@@ -7,7 +7,7 @@ export const LoginScreen = ({navigation}: any) => {
         <View>
             <Text> This is Login screen</Text>
             <Button title="Login" onPress={() => {
-                // navigation.navigate('SignUp')
+                navigation.navigate('SignUp')
             }} />
         </View>
     </ParentScreen>

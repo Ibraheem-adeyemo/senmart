@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, RouteProp} from '@react-navigation/native';
 import { ApplicationState } from '../../Stores/Store/reducers'
-import { SignUpScreen, LoginScreen } from '../../screens/index'
+import { SignUpScreen, LoginScreen, HomeScreen } from '../../screens/index'
 import { AuthParamList } from '../../models/Types/AuthParamLists';
 import { ParentScreen } from '../../screens/ParentScreen';
 import { Text } from 'react-native';
@@ -30,7 +30,8 @@ export const HomeStack:React.FC<RouteProps> = ({}) => {
                 isLoggedIn? (
                     <AppTabs />
                 ): (
-                    <Stack.Navigator initialRouteName="Login">
+                    <Stack.Navigator initialRouteName="Home">
+                        <Stack.Screen name="Home" component={HomeScreen} />
                         <Stack.Screen name="Login" component={LoginScreen} />
                         <Stack.Screen name="SignUp" component={SignUpScreen} />
                     </Stack.Navigator>

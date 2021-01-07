@@ -1,0 +1,8 @@
+export const actionType = {
+    LOADING: 'LOADING',
+    LOGIN: 'LOGIN',
+    ERROR: 'ERROR',
+    GET_CURRENT_ZONE: 'GET_CURRENT_ZONE',
+    GET_ZONES: 'GET_ZONES',
+    SET_SHOPPING_ZONES: 'SET_SHOPPING_ZONES'
+}

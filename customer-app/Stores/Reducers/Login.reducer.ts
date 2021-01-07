@@ -1,5 +1,5 @@
-import { AuthActionType, UserModel } from "../../models/Types/AuthInterface";
-
+import { ActionTypeInterface, UserModel } from "../../models/Types/AuthInterface";
+import {actionType} from '../../shared/constants/action.type';
 
 type userModel = {
     user: UserModel | object | undefined,
@@ -7,24 +7,19 @@ type userModel = {
     error?: string | undefined
 }
 
-const authType = {
-    userLogIn: 'LOGIN',
-    userLogOut: 'LOGOUT',
-    userAuthError: 'USER_AUTH_ERROR'
-}
 const defaultUserState = {
     user: {},
     isLoggedIn: false
 }
 
-export const loginReducer = (newState: userModel = defaultUserState, action: AuthActionType) => {
+export const loginReducer = (newState: userModel = defaultUserState, action: ActionTypeInterface) => {
     switch (action.actionType) {
-        case authType.userLogIn:
+        case actionType.LOGIN:
             return {
                 ...newState,
                 isloggedIn: true, user: action.payload
             }
-        case authType.userAuthError:
+        case actionType.ERROR:
             return {
                 ...newState, error: action.payload
             } 
